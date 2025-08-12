@@ -375,7 +375,7 @@ module.exports = {
 
         if (!entityId) return false;
 
-        const entityCommand = `${prefix}${switches[entityId].command}`.toLowerCase;
+        const entityCommand = `${prefix}${switches[entityId].command}`;
         let rest = command.replace(`${entityCommand} ${onEn}`, '');
         rest = rest.replace(`${entityCommand} ${onLang}`, '');
         rest = rest.replace(`${entityCommand} ${offEn}`, '');
