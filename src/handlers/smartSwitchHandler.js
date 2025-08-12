@@ -370,12 +370,12 @@ module.exports = {
         const statusLang = client.intlGet(guildId, 'commandSyntaxStatus');
 
         const entityId = Object.keys(switches).find(e =>
-            command === `${prefix}${switches[e].command}`.toLowerCase ||
-         command.startsWith(`${prefix}${switches[e].command} `.toLowerCase));
+            command === `${prefix}${switches[e].command}` ||
+         command.startsWith(`${prefix}${switches[e].command} `));
 
         if (!entityId) return false;
 
-        const entityCommand = `${prefix}${switches[entityId].command}`;
+        const entityCommand = `${prefix}${switches[entityId].command}`.toLowerCase;
         let rest = command.replace(`${entityCommand} ${onEn}`, '');
         rest = rest.replace(`${entityCommand} ${onLang}`, '');
         rest = rest.replace(`${entityCommand} ${offEn}`, '');
