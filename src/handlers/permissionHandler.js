@@ -91,7 +91,7 @@ module.exports = {
     },
 
     resetPermissionsAllChannels: async function (client, guild) {
-        const instance = client.getInstance(guild.id);
+/*        const instance = client.getInstance(guild.id);
 
         if (instance.channelId.category === null) return;
 
@@ -102,7 +102,7 @@ module.exports = {
                 await category.permissionOverwrites.set(perms);
             }
             catch (e) {
-                /* Ignore */
+
             }
         }
 
@@ -116,9 +116,9 @@ module.exports = {
                     await channel.permissionOverwrites.set(perms);
                 }
                 catch (e) {
-                    /* Ignore */
+
                 }
             }
-        }
-    },
+        } */
+    }, 
 }
